@@ -1,0 +1,90 @@
+html {
+  padding: 0;
+  margin: 0;
+  --green: rgb(40, 133, 40);
+  --size: 500px;
+}
+
+body {
+  background-image: url(back.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+
+input, textarea{
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 10px;
+	box-shadow: 0 0 5px black;
+  border-radius: 10px;
+}
+
+
+
+.input{
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: space-around;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.butt: {
+
+	vertical-align: bottom;
+}
+.output{
+	
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary{
+  flex: 1 1 auto;
+  margin: 10px;
+  width: 180px;
+
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  text-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px #000000;
+  border-radius: 10px;
+ }
+
+h5{
+	/*color: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);*/
+	color: black;
+	text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+/* Demo Stuff End -> */
+
+/* <- Magic Stuff Start */
+
+.btn-primary:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+
+.btn-primary {
+  background-image: linear-gradient(to right, #ffffff 0%, #fcb69f 51%, #000000 100%);
+}
+
+/* Magic Stuff End -> */
+
+.input-block {
+  width: 300px;
+  margin-right: 40px;
+  text-align: center;
+}
+

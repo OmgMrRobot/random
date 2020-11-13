@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"> 
+        <link rel="icon" type="image/png" href="/icon12.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
+
+        <title>Random</title>
+
+        <script type="text/javascript" src="/eel.js"></script>
+        <script type="text/javascript">
+
+        $(function() {
+
+            // считывает
+            async function display()
+            {
+            let a = document.getElementById('a_id').value + ' ';
+            let b = document.getElementById('inp_b').value;
+
+
+            let str = await eel.random_(a+b)();
+
+            document.getElementById('z').innerHTML = str;
+            }
+
+            // выводит 
+            $("#btn").click(function(){
+                display();
+            });
+        });
+
+    
+        </script>
+    </head>
+    
+    <body>
+        <div class="input">
+    	    <div class="input-block">
+    		<h5>Нижний предел</h5>
+                	<input type='text' id='a_id' placeholder='a_id' value='1'>
+    	    </div>
+	    <div class="input-block">
+    		<h5>Верхний предел</h5>
+                	<input type='text' id='inp_b' placeholder='inp_b'  value='100'>
+    	    </div>
+	   
+        </div>
+
+
+        <div class="button">
+            <input type='button' id='btn' class='btn-primary' value='Calculate'>
+            
+        </div>
+</div>
+
+    <div class="output">
+
+
+        <div class="input-block">
+            <h5>Случайное число</h5>
+            <textarea id= 'z'></textarea>
+        </div>
+    </div>
+    </body>
+</html>
